@@ -20,15 +20,16 @@ Download repository of git.
 Url: https://github.com/brandonperezlara/kast
 downloaded the repository will have the following folders:
 
-#cd Api
-
+>cd Api
 First we install the API components with the following command inside the directory Api:
-#npm install
+>npm install
+
 Once installed we deploy the API:
-#pm2 start src\index.js
+>pm2 start src\index.js
 
 After having deployed the API we will install the libraries of the view, for this we will position ourselves in the path of the Kast directory and install them:
-#cd Kast
-#npm install
+>cd Kast
+>npm install
+
 it only remains to start it with the following command:
-#npm start
+>npm start
