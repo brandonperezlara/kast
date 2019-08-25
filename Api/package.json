@@ -1,0 +1,22 @@
+{
+    "name": "kast",
+    "version": "1.0.0",
+    "description": "Task Manager Api",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Brandon Perez",
+    "license": "ISC",
+    "dependencies": {
+        "bluebird": "^3.5.5",
+        "body-parser": "1.18.3",
+        "express": "4.16.3",
+        "file-system": "^2.2.2",
+        "joi": "13.4.0",
+        "mongoose": "^5.5.8",
+        "path": "^0.12.7",
+        "uuid": "^3.3.2"
+    },
+    "devDependencies": {}
+}
