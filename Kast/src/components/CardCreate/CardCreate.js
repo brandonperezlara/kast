@@ -18,7 +18,7 @@ async function sendData(TotalTasks, dispatch) {
   newTasks.status = "Open";
   newTasks.id = Object.keys(TotalTasks).length;
 
-  if (gSubsSelect != "") {
+  if (gSubsSelect !== "") {
     try {
       const gSubsSelect_ = gSubsSelect.map(gSubs => {
         return gSubs.value;
@@ -40,7 +40,7 @@ function clearInput(params) {
 }
 
 function getValue(e) {
-  if (e.type == "select") {
+  if (e.type === "select") {
   } else {
     gSubsSelect = e;
   }

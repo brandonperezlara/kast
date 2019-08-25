@@ -1,4 +1,4 @@
-import React, { memo, useContext, useState, useCallback } from "react";
+import React, { memo, useContext, useState } from "react";
 import Card from "emerald-ui/lib/Card";
 import styled from "styled-components";
 import DropdownItem from "emerald-ui/lib/DropdownItem";

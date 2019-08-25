@@ -1,7 +1,6 @@
 import React, { memo } from "react";
 import Avatar from "emerald-ui/lib/Avatar";
 import DropdownButton from "emerald-ui/lib/DropdownButton";
-import DropdownItem from "emerald-ui/lib/DropdownItem";
 import Icon from "emerald-ui/lib/Icon";
 import Nav from "emerald-ui/lib/Nav";
 import Navbar from "emerald-ui/lib/Navbar";

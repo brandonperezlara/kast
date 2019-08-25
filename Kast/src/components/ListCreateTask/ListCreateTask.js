@@ -10,18 +10,12 @@ const ContentLists = styled.div`
   display: flow;
   justify-content: left;
   margin-top: 20px;
-  float:left;
+  float: left;
 `;
 
 const SubContentList = styled.div`
   margin: 10px;
 `;
-
-const TYPES = {
-  OPEN: "Open",
-  IN_PROGRESS: "In Progress",
-  DONE: "Done"
-};
 
 function ListCreateTask() {
   const {
@@ -34,21 +28,11 @@ function ListCreateTask() {
   }, [dispatch]);
 
   return (
-
-    
     <>
       <ContentLists>
-        
-        
         <SubContentList>
-          <PanelCreator
-            key={1}
-            titleList={TYPE_LIST.OPEN}
-            tasks={allTasks}
-          />
+          <PanelCreator key={1} titleList={TYPE_LIST.OPEN} tasks={allTasks} />
         </SubContentList>
-        
-        
       </ContentLists>
     </>
   );

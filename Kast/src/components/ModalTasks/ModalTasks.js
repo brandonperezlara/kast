@@ -1,4 +1,4 @@
-import React, { memo, useContext, useState, useEffect } from "react";
+import React, { memo, useContext, useState } from "react";
 import Button from "emerald-ui/lib/Button";
 import Modal from "emerald-ui/lib/Modal";
 import TextField from "emerald-ui/lib/TextField";
@@ -20,7 +20,7 @@ async function sendData(TotalTasks, task, dispatch) {
   newTasks.id = task.id;
   newTasks._id = task._id;
 
-  if (gSubsSelect != "") {
+  if (gSubsSelect !== "") {
     try {
       const gSubsSelect_ = gSubsSelect.map(gSubs => {
         return gSubs.value;
@@ -42,21 +42,18 @@ function TaskCard({ showElement, task, callback }) {
     dispatch
   } = useContext(GlobalContext);
   const tasks = allTasks;
-  var showe = showElement;
   var aes = false;
   const [showOptions, setshowOptions] = useState(aes ? true : false);
 
   const close = () => {
-    var aes = false;
     console.log("cerrando" + showOptions);
     setshowOptions(false);
     showElement = false;
     window.location.reload();
   };
-  const Open = () => {};
 
   function getValue(e) {
-    if (e.type == "select") {
+    if (e.type === "select") {
     } else {
       gSubsSelect = e;
     }
@@ -64,7 +61,7 @@ function TaskCard({ showElement, task, callback }) {
   const itemsCombo = task => {
     const filterByList = (type, tasks) => {
       for (let i = 0; i < tasks.length; i++) {
-        if (tasks[i]._id == type) {
+        if (tasks[i]._id === type) {
           return true;
         } else {
           return false;

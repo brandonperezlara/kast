@@ -5,21 +5,21 @@ import deleteTask from "../interactions/deleteTask.js";
 import updateTask from "../interactions/updateTask.js";
 import getSubs from "../interactions/subs.js";
 import deleteSubs from "../interactions/deleteSubs.js";
+import { URL_API } from "../utils/enviroment";
 
-
-//action : get task 
+//action : get task
 export const fetchTasks = async dispatch => {
-  const AllTasks = await getTask()
-   return dispatch({
-    type:  "FETCH_TASKS",
-    payload: await  AllTasks
+  const AllTasks = await getTask(URL_API);
+  return dispatch({
+    type: "FETCH_TASKS",
+    payload: await AllTasks
   });
 };
 
-//action : get lists Personal of users 
+//action : get lists Personal of users
 export const fetchSubs = async dispatch => {
-  const AllSubs = await getSubs()
-  fetchTasks(dispatch)
+  const AllSubs = await getSubs(URL_API);
+  fetchTasks(dispatch);
   return dispatch({
     type: "FETCH_SUBS",
     payload: await AllSubs
@@ -27,9 +27,9 @@ export const fetchSubs = async dispatch => {
 };
 
 //action : Add tasks
-export const AddTasks = async (dataTasks,dispatch) => {
-  await addTaskFun(dataTasks, )
- fetchTasks(dispatch)
+export const AddTasks = async (dataTasks, dispatch) => {
+  await addTaskFun(dataTasks, URL_API);
+  fetchTasks(dispatch, URL_API);
   return dispatch({
     type: "ADD_TASKS",
     payload: await dataTasks
@@ -38,9 +38,9 @@ export const AddTasks = async (dataTasks,dispatch) => {
 
 //action : Add User to List
 export const AddSubs = async (dataTasks, dispatch) => {
-  await addSubsFun(dataTasks, )
-  fetchTasks(dispatch)
-  fetchSubs(dispatch)
+  await addSubsFun(dataTasks, URL_API);
+  fetchTasks(dispatch, URL_API);
+  fetchSubs(dispatch, URL_API);
   return dispatch({
     type: "ADD_SUBS",
     payload: await dataTasks
@@ -49,9 +49,9 @@ export const AddSubs = async (dataTasks, dispatch) => {
 
 //action : Delete Tasks
 export const DeleteTasks = async (dataTasks, dispatch) => {
-  await deleteTask(dataTasks, )
-  fetchTasks(dispatch, )
-  fetchSubs(dispatch, )
+  await deleteTask(dataTasks, URL_API);
+  fetchTasks(dispatch, URL_API);
+  fetchSubs(dispatch, URL_API);
   return dispatch({
     type: "DELETE_TASKS",
     payload: await dataTasks
@@ -60,20 +60,20 @@ export const DeleteTasks = async (dataTasks, dispatch) => {
 
 //action : Delete user
 export const DeleteSubs = async (dataTasks, dispatch) => {
-  await deleteSubs(dataTasks, )
-  fetchTasks(dispatch, )
-  fetchSubs(dispatch, )
+  await deleteSubs(dataTasks, URL_API);
+  fetchTasks(dispatch, URL_API);
+  fetchSubs(dispatch, URL_API);
   return dispatch({
     type: "DELETE_SUBS",
     payload: await dataTasks
   });
 };
 
-//action : Update Tasks 
+//action : Update Tasks
 export const UpdateTask = async (dataTasks, dispatch) => {
-  await updateTask(dataTasks)
-  fetchTasks(dispatch)
-  fetchSubs(dispatch)
+  await updateTask(dataTasks, URL_API);
+  fetchTasks(dispatch, URL_API);
+  fetchSubs(dispatch, URL_API);
   return dispatch({
     type: "UPDATE_SUBS",
     payload: await dataTasks
@@ -82,9 +82,9 @@ export const UpdateTask = async (dataTasks, dispatch) => {
 
 //action: Move Tasks
 export const MoveTask = async ({ id, newStatus }, dataTasks, dispatch) => {
-  await updateTask(dataTasks, )
-  fetchTasks(dispatch, )
-  fetchSubs(dispatch, )
+  await updateTask(dataTasks, URL_API);
+  fetchTasks(dispatch, URL_API);
+  fetchSubs(dispatch, URL_API);
   return dispatch({
     type: "MOVE_TASK",
     payload: {
