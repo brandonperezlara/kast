@@ -18,7 +18,7 @@ The librery pm2 to deploy the API (npm i pm2)
 Install
 Download repository of git.
 Url: https://github.com/brandonperezlara/kast
-downloaded the repository will have the following folders:
+
 
 >cd Api
 
