@@ -1,29 +1,21 @@
-
 KAST
-
-
 
 Description
 Kast is a tool that allows you to manage tasks to have a better organization, can be saved in database and assigned to a list of people. Tasks can change status depending on the progress you make, they can be in Open, in Progress and done.
 You can also edit the particular list of people to whom tasks are assigned.
-You can see the application in the following URL
-URL: http://3.15.197.171:3000/
-
 
 Interfaces:
-  
-Edit Tasks:
 
- 
+Edit Tasks:
 
 Requirements
 For the installation of the application it is necessary to have Node Js installed on the device
-The librery  pm2 to deploy the API (npm i pm2)
+The librery pm2 to deploy the API (npm i pm2)
 
 Install
 Download repository of git.
 Url: https://github.com/brandonperezlara/kast
-downloaded the repository will have the following folders: 
+downloaded the repository will have the following folders:
 
 #cd Api
 
@@ -37,4 +29,3 @@ After having deployed the API we will install the libraries of the view, for thi
 #npm install
 it only remains to start it with the following command:
 #npm start
-
