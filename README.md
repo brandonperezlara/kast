@@ -1,12 +1,15 @@
-KAST
+
+#KAST
+
+<br>
+<div>
+    <img height="100" src="https://github.com/brandonperezlara/kast/blob/master/Kast/public/logo.png" >
+</div>
+<br>
 
 Description
 Kast is a tool that allows you to manage tasks to have a better organization, can be saved in database and assigned to a list of people. Tasks can change status depending on the progress you make, they can be in Open, in Progress and done.
 You can also edit the particular list of people to whom tasks are assigned.
-
-Interfaces:
-
-Edit Tasks:
 
 Requirements
 For the installation of the application it is necessary to have Node Js installed on the device
